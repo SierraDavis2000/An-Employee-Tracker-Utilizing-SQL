@@ -101,7 +101,7 @@ const viewEmployees = () => {
     const query = 'SELECT * FROM employee';
     connection.query(query, (err,res) => {
         if (err) throw err;
-        console.table(res);
+        console.table('Employees', res);
     })
 
     openProgram();
@@ -113,7 +113,7 @@ const openDepartments = () => {
     const query = 'SELECT * FROM department';
     connection.query(query, (err,res) => {
         if (err) throw err;
-        console.table(res);
+        console.table('Departments', res);
     })
 
     openProgram();
@@ -125,7 +125,7 @@ const openRoles = () => {
     const query = 'SELECT * FROM role';
     connection.query(query, (err,res) => {
         if (err) throw err;
-        console.table(res);
+        console.table('ROLES',res);
     })
 
     openProgram();
@@ -157,12 +157,14 @@ const updateEmployees = () => {
                     type: 'list',
                     name: 'role',
                     message: "What is the role of your new employee?",
+                    loop: false,
                     choices: roles,
                 },
                 {
                     type: 'list',
                     name: 'managerId',
                     message: 'What is the id of their manager? (If applicable)',
+                    loop: false,
                     choices: [13,14,15,null]
                 }
             ])
