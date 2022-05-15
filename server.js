@@ -163,9 +163,9 @@ const updateEmployees = () => {
                 {
                     type: 'list',
                     name: 'managerId',
-                    message: 'What is the id of their manager? (If applicable)',
+                    message: 'What is the id of their manager?',
                     loop: false,
-                    choices: [13,14,15,null]
+                    choices: ([13,14,15])
                 }
             ])
             .then((data) => {
