@@ -1,5 +1,3 @@
--- insert values into department
-
 INSERT INTO department (name)
 VALUES 
 ("Human Resources"), 
@@ -14,8 +12,6 @@ VALUES
 ("Board of Directors"),
 ("Maintenance");
 
--- insert values into role
-
 INSERT INTO role (title, salary, department_id)
 VALUES 
 ("Recruitor", 25000, 1),
@@ -27,7 +23,7 @@ VALUES
 ('Software Developer', 85000, 5), 
 ('Researcher', 55000, 6), 
 ('Production Designer', 55000, 6),
-('Customer Service Representitive', 25000, 7),
+('Customer Service Rep', 25000, 7),
 ('CSR Department Manager', 45000, 7), 
 ('Mailroom Operator', 25000, 8), 
 ('Financial Director', 95000, 9), 
@@ -36,9 +32,7 @@ VALUES
 ('CEO', 150000, 10), 
 ('Custodian', 35000, 11);
 
--- insert values into employees
-
-INSERT INTO employees (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 ('Clementine','Barnes', 1 , 13), 
 ('Sidney', 'Bateman', 2, 13), 
@@ -57,4 +51,3 @@ VALUES
 ('Theodora', 'Reese', 15, NULL), 
 ('Billy-Joel', 'Lennon', 16, NULL), 
 ('Sadiyah', 'Holland', 17, NULL);
-
