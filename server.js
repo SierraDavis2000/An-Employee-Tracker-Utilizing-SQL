@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const consoleTable = require('console.table'); 
 const util = require('util'); 
-require('dotenv').config();
+
 
 //connection to mysql 
 const connection = mysql.createConnection(
@@ -11,11 +11,11 @@ const connection = mysql.createConnection(
       host: 'localhost',
       port: 3306, 
       // MySQL username,
-      user:  process.env.DB_USER,
+      user: 'root',
       // MySQL password
-      password: process.env.DB_PASSWORD,
+      password: 'Greenvale1744',
       // MySQL database name
-      database: process.env.DB_NAME
+      database: 'employeetracking_db'
     },
     console.log(`Connected to the employeetracking_db database.`)
 );
@@ -39,6 +39,7 @@ const openProgram = async () => {
             name: 'action',
             type: 'list',
             message: 'Please select one of the following options to proceed:',
+            loop: false,
             choices: [
                 'Open Employees',
                 'Open Departments',
